@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner-main">
+            <nav class="navbar">
+                <h3>
+                    <img src="https://cdn-icons-png.freepik.com/512/2922/2922510.png?uid=R136642857&ga=GA1.1.1064781564.1691778604&"
+                        alt="">
+                    <span>Hello</span>
+                </h3>
+                <p><span class="city">city</span>, <span class="country">country</span></p>
+                <section>
+                    <input type="search" placeholder="Search City ....">
+                    <button>Search</button>
+                </section>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="checkbox-label">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-sun">
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 2v2" />
+                                <path d="M12 20v2" />
+                                <path d="m4.93 4.93 1.41 1.41" />
+                                <path d="m17.66 17.66 1.41 1.41" />
+                                <path d="M2 12h2" />
+                                <path d="M20 12h2" />
+                                <path d="m6.34 17.66-1.41 1.41" />
+                                <path d="m19.07 4.93-1.41 1.41" />
+                            </svg>
+                        </i>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-moon">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                            </svg>
+                        </i>
+                        <span class="ball"></span>
+                    </label>
+                </div>
+            </nav>
+            <div class="header">
+                <div class="box-1">
+                    <div class="inner-box-top">
+                        <h5>Weather</h5>
+                        <p>What's the weather</p>
+                    </div>
+                    <div class="inner-box-center">
+                        <div><span class="temperature">NaN</span><sup>.</sup>C</div>
+                        <section class="description">------------</section>
+                    </div>
+                    <ul class="box-ul">
+                        <li>Humidity <span class="humidity">NaN</span></li>
+                        <li>Max Temp. <span class="maxTemp">NaN</span></li>
+                        <li>Min Temp. <span class="minTemp">NaN</span></li>
+                    </ul>
+                </div>
+                <div class="box-1">
+                    <div class="inner-box-top">
+                        <h5>Air Quality</h5>
+                        <p>What's the air today</p>
+                    </div>
+                    <div class="inner-box-center">
+                        <div><span class="windSpeed">NaN</span></div>
+                        <section>Wind Speed</section>
+                    </div>
+                    <ul class="box-ul">
+                        <li>Degree <span class="windDegree">NaN</span></li>
+                        <li>Pressure <span class="pressure">NaN</span></li>
+                        <li>Visiblity <span class="visiblity">NaN</span></li>
+                    </ul>
+                </div>
+                <div class="more-data">
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                    <div class="next-data">
+                        <section class="dateTime"></section>
+                        <p class="moreTemp"><span>NaN</span><sup>.</sup>C</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>

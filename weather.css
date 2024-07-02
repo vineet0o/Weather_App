@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Slabo 27px";
+    font-style: normal;
+}
+
+:root {
+    --backgroundColor: #eee;
+    --black: #000;
+    --white: #fff;
+    --gray: #333;
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+.weather-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 30px;
+}
+
+.weather-left-content h1 {
+    font-size: 45px;
+    color: #fd7c28;
+}
+
+.weather-left-content p {
+    color: #333;
+}
+
+.weather-left-content a {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(15deg, #fd7c28, #f4cd5f);
+    width: fit-content;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.weather-left-content a:hover {
+    background: linear-gradient(15deg, #f4cd5f, #fd7c28);
+}
+
+.weather-right-content {
+    display: flex;
+}
+
+.weather-inner-img {
+    width: 550px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    overflow: hidden;
+}
+
+.weather-inner-img img {
+    width: 100%;
+}
+
+@media (max-width:950px) {
+
+    .weather-left-content h1 {
+        font-size: 42px;
+    }
+
+    .weather-inner-img {
+        width: 450px;
+    }
+}
+
+@media (max-width:770px) {
+
+    .weather-inner-img {
+        width: 350px;
+    }
+}
+
+@media (max-width:650px) {
+
+    .weather-left-content h1 {
+        font-size: 38px;
+    }
+
+    .weather-left-content p {
+        font-size: 16px;
+    }
+
+    .weather-inner-img {
+        width: 350px;
+    }
+}
+
+@media (max-width:580px) {
+
+    .weather-left-content h1 {
+        font-size: 35px;
+    }
+
+    .weather-left-content p {
+        font-size: 15px;
+    }
+
+    .weather-inner-img {
+        width: 250px;
+    }
+}
+
+@media (max-width:500px) {
+
+    .weather-left-content {
+        border: 2px solid;
+        width: 100%;
+        padding: 30px;
+        background-image: linear-gradient(rgb(0, 0, 0, .2), rgb(0, 0, 0,0.4), rgb(0, 0, 0, .6)), url("main.jpg");
+        background-size: cover;
+        background-position: right;
+    }
+
+    .weather-right-content {
+        display: none;
+    }
+
+    .weather-left-content p {
+        color: #eee;
+    }
+}
+
+
+/********** inner main page **************/
+
+.inner-main {
+    max-width: 1250px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--backgroundColor);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.navbar h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--black);
+}
+
+.navbar h3 img {
+    width: 30px;
+    border-radius: 50%;
+    background-color: #7ec9cf;
+}
+
+.navbar section {
+    display: flex;
+}
+
+.navbar p {
+    color: var(--black);
+}
+
+.navbar section input {
+    width: 300px;
+    height: 35px;
+    border: none;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.navbar section button {
+    color: #fff;
+    background: linear-gradient(15deg, #fd7c28, #f4cd5f);
+    width: fit-content;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 17px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.navbar section button:hover {
+    background: linear-gradient(15deg, #f4cd5f, #fd7c28);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: var(--gray);
+    width: 52px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eeeeee2e;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.checkbox-label .ball {
+    background-color: var(--white);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(25.5px);
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 10px;
+}
+
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px #33333326;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: #bbd7ec;
+}
+
+.inner-box-top h5 {
+    font-size: 20px;
+}
+
+.inner-box-center div {
+    font-size: 30px;
+}
+
+.box-ul {
+    display: flex;
+    gap: 10px;
+}
+
+.box-ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #232f3e;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.box-ul li span {
+    font-size: 15px;
+}
+
+.more-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.next-data {
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px #3333333b;
+    justify-content: center;
+    padding-left: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    color: var(--black);
+    background-color: var(--toGray);
+}
+
+.dateTime {
+    max-width: 100px;
+}
+
+#map {
+    height: 400px;
+}
+
+@media (max-width:1150px) {
+
+    .more-data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navbar section input {
+        width: 250px;
+    }
+}
+
+@media (max-width:650px) {
+
+    .navbar {
+        padding-inline: 10px;
+    }
+
+    .navbar section input {
+        width: 200px;
+    }
+
+    .box-1 {
+        width: 300px;
+    }
+}
+
+@media (max-width:520px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar section input {
+        width: 150px;
+    }
+}
